@@ -1,0 +1,17 @@
+{
+  "name": "鹿叙 | LU XU 接单管理",
+  "short_name": "鹿叙",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFF8E7",
+  "theme_color": "#FFF8E7",
+  "lang": "zh-CN",
+  "description": "永生花定制接单、发货采购提醒与收入流水",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

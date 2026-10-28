@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>鹿叙 | LU XU</title>
+<meta name="description" content="鹿叙永生花接单管理与收入流水">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="鹿叙">
+<meta name="theme-color" content="#FFF8E7">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<header id="topbar">
+  <div class="tb-inner">
+    <div class="tb-left">
+      <div class="tb-brand">鹿叙 <span class="tb-brand-en">LU XU</span></div>
+      <div class="tb-title" id="tbTitle">待办</div>
+    </div>
+    <div class="tb-right" id="tbRight"></div>
+  </div>
+</header>
+
+<main id="view"></main>
+
+<button id="fab" aria-label="新建订单">
+  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+    <path d="M12 5v14M5 12h14"/>
+  </svg>
+</button>
+
+<nav id="tabbar">
+  <button class="tab is-on" data-tab="today">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 11.5 10.8 13.3 15.5 8.5"/><path d="M20.5 12.5a8.5 8.5 0 1 1-3.2-6.6"/>
+    </svg>
+    <span>待办</span>
+  </button>
+  <button class="tab" data-tab="orders">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="3.5" width="16" height="17" rx="3"/><path d="M8 8.5h8M8 12.5h8M8 16.5h5"/>
+    </svg>
+    <span>订单</span>
+  </button>
+  <button class="tab" data-tab="income">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 17.5 9 11l4 3.5 6.5-7.5"/><path d="M3.5 20.5h17"/><path d="M15.5 7h4v4"/>
+    </svg>
+    <span>收入</span>
+  </button>
+</nav>
+
+<div id="sheet" class="sheet-wrap" hidden>
+  <div class="sheet-mask" data-act="close-sheet"></div>
+  <div class="sheet" id="sheetBody"></div>
+</div>
+
+<div id="viewer" class="viewer" hidden>
+  <img id="viewerImg" alt="">
+  <button class="viewer-close" data-act="close-viewer" aria-label="关闭">×</button>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+
+<input type="file" id="photoInput" accept="image/*" multiple hidden>
+<input type="file" id="importInput" accept="application/json,.json" hidden>
+
+<script src="store.js"></script>
+<script src="charts.js"></script>
+<script src="views.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
